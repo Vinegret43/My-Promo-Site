@@ -1,0 +1,168 @@
+
+body {
+	background-image: url(bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #252525;
+	font-family: Open Sans;
+	font-size: 1.6vw;
+	color: white;
+}
+
+h5 {transition: 0.3s all; user-select: none;}
+h5:hover {color: green;}
+
+p {font-size: 2.3vw;}
+
+.bg {
+	user-select: none;
+	width: 98vw;
+}
+
+.table1 {
+	animation: appear 2s;
+	margin-top: 3vw;
+	position: absolute;
+	top: 0;
+	right: 2vw;
+}
+.table1 p, h1, h4 {
+	margin-bottom: 7vw;
+	margin-top: 3vw;
+}
+.table1 h4 {
+	margin-left: 11vw;
+	margin-bottom: 7vw;
+}
+
+.table2 {
+	position:absolute;
+	top: 60vw;
+	left: 1.5vw;
+}
+.table2 h4 {padding-left: 7vw;}
+.table2 p {font-size:2.1vw;}
+
+.table3 {
+	position:absolute;
+	top: 112.5vw;
+	right: 2vw;
+}
+.table3 h4 {padding-left: 8vw;}
+.table3 h1 {padding-left: 6vw;}
+.table3 p {text-align:right; font-size:2.1vw;}
+
+.table4 {
+	text-align: center;
+	position: absolute;
+	top: 165vw;
+}
+.table4 p {
+	margin-top: 3.5vw;
+}
+.boxes {
+	display: flex;
+	flex-direction: row;
+	width: 98vw;
+}
+.boxes div {
+	flex: 33%;
+	text-align: center;
+	transition: 0.5s all;
+	margin-left: 3vw;
+	margin-right: 3vw;
+	padding-top: 2vw;
+	border: 1px solid white;
+	border-radius: 30px;
+}
+.boxes div:hover {
+	background-color: #333;
+	flex: 40%;
+}
+
+.mail {
+	display: inline-block;
+	transition: 0.3s all; 
+	text-decoration: underline;
+}
+.mail:hover {
+	color: green;
+	cursor: pointer;
+}
+	
+.popup {
+	visibility: hidden;
+	opacity: 0%;
+}
+.show { 
+	color: lightblue;
+	visibility: visible;
+	animation: appear 1s;
+}
+
+.BeforeScroll{opacity: 0%;}
+.AfterScroll{animation: appear 1s;}
+
+@keyframes appear {
+	from {opacity: 0%; padding-top: 2vh;}
+	to {opacity: 100%; padding-top: 0;}
+}
+	
+@media screen and (max-width: 960px) {
+	body {
+		font-size: 3.5vw;
+		background-image: url(bg2.jpg);
+	}
+	h4 {
+		font-size: 3.5vw; 
+	}
+	p {
+		font-size: 3.5vw;
+	}
+	
+	.table1 {
+		text-align: center;
+		justify-content: center;
+		top: 105vw;
+		right: 18vw;
+	}
+	.table1 h4 {
+		margin-left: 0;
+	}
+	
+	.table2 {
+		text-align: center;
+		top: 275vw;
+		left: 25vw;
+	}
+	.table2 h4 {padding-left: 0;}
+	.table2 p {font-size: 4vw;}
+	
+	.table3 {
+		top: 455vw;
+		right: 28vw;
+		text-align: center;
+	}
+	.table3 p {
+		font-size: 3.5vw;
+		text-align: center;
+	}
+	.table3 h1{
+		padding-left: 0;
+	}
+	.table3 h4 {
+		padding-left: 0;
+	}
+	.table4 {
+		top: 560vw;
+		text-align: center;
+	}
+	.boxes div:hover {
+		background-color: #333;
+		flex: 33%;
+	}
+	.boxes div img {
+		width: 75%;
+	}
+	
+}
